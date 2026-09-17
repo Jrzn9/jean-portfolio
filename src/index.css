@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Evita que o menu fixo (sticky) cubra o topo da seção ao clicar em um link do menu */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}

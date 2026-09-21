@@ -16,7 +16,7 @@ const skillGroups: SkillGroup[] = [
   {
     icon: <Server className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
     title: "Back-End",
-    skills: ["Python", "FastAPI", "Node.js", "Express", "Pydantic", "Zod", "APIs REST"]
+    skills: ["Python", "FastAPI", "Node.js", "Express", "Pydantic", "APIs REST"]
   },
   {
     icon: <Database className="w-5 h-5 text-blue-600 dark:text-blue-400" />,

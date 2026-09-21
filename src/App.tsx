@@ -9,12 +9,12 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 relative">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 relative transition-colors">
       {/* Background Subtle Dot Grid */}
       <div
         className="fixed inset-0 pointer-events-none z-0 opacity-40"
         style={{
-          backgroundImage: "radial-gradient(#cbd5e1 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(var(--dot-color) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
         }}
       />
@@ -22,27 +22,29 @@ export const App: React.FC = () => {
       <Navbar />
 
       <main className="relative z-10 max-w-6xl mx-auto px-6 pt-8 pb-24 space-y-28">
-        <Hero avatarUrl="/avatar.png" />
+        <Hero avatarUrl="/avatar.jpg" />
 
         {/* Seção Sobre */}
         <section id="sobre" className="space-y-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-extrabold text-slate-900 font-heading">
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">
               Sobre Mim
             </h2>
-            <p className="text-slate-600 mt-2">
+            <p className="text-slate-600 dark:text-slate-400 mt-2">
               Um pouco da minha trajetória e do que estou buscando.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm leading-relaxed text-slate-700 space-y-4">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm leading-relaxed text-slate-700 dark:text-slate-300 space-y-4">
             <p>
-              Estudante de Ciência da Computação (4º semestre) na UniCarioca,
-              com foco em desenvolvimento Front-End (React, TypeScript, Tailwind
-              CSS) e primeiros passos no Back-End com Python e FastAPI. Já
-              desenvolvi projetos próprios, como este portfólio e uma API de
-              fichas de treino com autenticação JWT e PostgreSQL. Sou esforçado,
-              responsável e estou em busca de uma oportunidade para iniciar
-              minha carreira como desenvolvedor Full-Stack.
+              Estudante de Ciência da Computação na UniCarioca, aprendendo
+              Full-Stack na prática, um projeto de cada vez.
+            </p>
+            <p>
+              Hoje desenvolvo, ao lado do Kennedy Motta, a{" "}
+              <strong>Adapty</strong> — uma plataforma de treinos com montador
+              automático, otimização inteligente e segurança de verdade por
+              trás. Estou pronto para levar essa energia a um time como
+              desenvolvedor Full-Stack.
             </p>
           </div>
         </section>

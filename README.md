@@ -15,18 +15,19 @@
 ## Sobre o Projeto
 
 Site pessoal desenvolvido do zero para apresentar trajetória, formação, habilidades e projetos como
-desenvolvedor front-end. Interface em tema claro, totalmente responsiva, construída com componentização
-reutilizável e navegação por âncoras entre as seções.
+desenvolvedor Full-Stack. Totalmente responsivo, com suporte a tema claro e escuro, construído com
+componentização reutilizável e navegação por âncoras entre as seções.
 
 ## Funcionalidades
 
 - Hero com apresentação, redes sociais e chamada para ação
 - Seção Sobre Mim com resumo profissional
 - Formação, Cursos e Idiomas
-- Habilidades organizadas por categoria (Front-End, Back-End, Banco de Dados, Ferramentas, Conceitos)
+- Habilidades organizadas por categoria (Front-End, Back-End, Banco de Dados, Segurança, Ferramentas, Conceitos)
 - Projetos com links para os repositórios reais no GitHub
 - Seção de Contato com e-mail, telefone e localização clicáveis
 - Menu fixo (sticky) com scroll suave entre seções
+- Tema claro/escuro com alternância manual (respeitando a preferência do sistema no primeiro acesso e sem "flash" ao carregar)
 - Layout responsivo para mobile, tablet e desktop
 
 ## Tecnologias
@@ -70,13 +71,14 @@ src/
   main.tsx          # Entry point
   index.css         # Estilos globais e fontes
 public/
-  avatar.png        # Foto de perfil exibida na seção Hero
+  avatar.jpg        # Foto de perfil exibida na seção Hero (comprimida, ~800x800)
 ```
 
 ## Adicionando a foto de perfil
 
-Salve uma imagem como `avatar.png` dentro da pasta `public/`. Ela substitui automaticamente o placeholder
-usado como fallback.
+Salve uma imagem como `avatar.jpg` dentro da pasta `public/`, idealmente já redimensionada para até
+800x800px e comprimida (JPEG/WebP) para manter o carregamento rápido. Ela substitui automaticamente o
+placeholder usado como fallback.
 
 ## Contato
 

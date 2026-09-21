@@ -20,6 +20,12 @@ const projects: Project[] = [
     description: "API completa por trás do app Adapty, desenvolvida em dupla com Kennedy Motta. Monta, analisa e otimiza fichas de treino automaticamente a partir de objetivo, nível e mais de 20 particularidades de saúde, com histórico, estatísticas, sobrecarga progressiva, recursos sociais em tempo real e segurança de ponta a ponta (JWT, bcrypt, auditoria de ações administrativas).",
     tags: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "WebSocket", "JWT"],
     githubUrl: "https://github.com/Jrzn9/fichas-de-treino"
+  },
+  {
+    title: "Gerenciador de Projetos — API REST",
+    description: "API no estilo de um quadro Kanban para gerenciar projetos e tarefas em equipe. Controle de permissões por papel (dono e membro), tarefas com status e responsável, validação de dados em todas as rotas e testes automatizados cobrindo os principais fluxos.",
+    tags: ["Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Zod"],
+    githubUrl: "https://github.com/Jrzn9/gerenciador-projetos-api"
   }
 ];
 
@@ -31,7 +37,7 @@ export const Projects: React.FC = () => {
         <p className="text-slate-600 dark:text-slate-400 mt-2">Projetos pessoais desenvolvidos para colocar em prática o que venho estudando.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((proj, idx) => (
           <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md dark:hover:border-purple-500/50 transition-shadow">
             <div className="space-y-4">

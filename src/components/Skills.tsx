@@ -16,22 +16,22 @@ const skillGroups: SkillGroup[] = [
   {
     icon: <Server className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
     title: "Back-End",
-    skills: ["Python", "FastAPI", "Pydantic", "APIs REST", "WebSocket"]
+    skills: ["Python", "FastAPI", "Node.js", "Express", "Pydantic", "Zod", "APIs REST"]
   },
   {
     icon: <Database className="w-5 h-5 text-blue-600 dark:text-blue-400" />,
     title: "Banco de Dados",
-    skills: ["PostgreSQL", "SQL", "SQLAlchemy", "Alembic"]
+    skills: ["PostgreSQL", "SQL", "SQLAlchemy", "Prisma"]
   },
   {
     icon: <Shield className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
     title: "Segurança",
-    skills: ["JWT", "bcrypt", "Autenticação", "Rate Limiting"]
+    skills: ["JWT", "bcrypt", "Autenticação"]
   },
   {
     icon: <Wrench className="w-5 h-5 text-slate-700 dark:text-slate-300" />,
     title: "Ferramentas",
-    skills: ["Git", "GitHub", "Pytest", "Redis"]
+    skills: ["Git", "GitHub", "Pytest", "Jest"]
   },
   {
     icon: <Lightbulb className="w-5 h-5 text-amber-600 dark:text-amber-400" />,

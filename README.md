@@ -10,6 +10,10 @@
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 </p>
 
+<p align="center">
+  <a href="https://jrzn9.github.io/jean-portfolio/"><strong>Acesse o site: jrzn9.github.io/jean-portfolio</strong></a>
+</p>
+
 ---
 
 ## Sobre o Projeto
@@ -37,6 +41,7 @@ componentização reutilizável e navegação por âncoras entre as seções.
 | Front-End  | React 18, TypeScript, Tailwind CSS |
 | Build Tool | Vite                               |
 | Ícones     | Lucide React                       |
+| Deploy     | GitHub Pages + GitHub Actions      |
 
 ## Como rodar localmente
 
@@ -47,7 +52,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173` no navegador.
+Acesse `http://localhost:5173/jean-portfolio/` no navegador.
 
 ### Build de produção
 
@@ -55,6 +60,11 @@ Acesse `http://localhost:5173` no navegador.
 npm run build
 npm run preview
 ```
+
+### Deploy
+
+O site é publicado automaticamente no GitHub Pages a cada push na branch `main`, pelo workflow
+`.github/workflows/deploy.yml` (roda `npm ci` e `npm run build` e publica a pasta `dist/`).
 
 ## Estrutura do Projeto
 

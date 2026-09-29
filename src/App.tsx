@@ -22,7 +22,7 @@ export const App: React.FC = () => {
       <Navbar />
 
       <main className="relative z-10 max-w-6xl mx-auto px-6 pt-8 pb-24 space-y-28">
-        <Hero avatarUrl="/avatar.jpg" />
+        <Hero avatarUrl={`${import.meta.env.BASE_URL}avatar.jpg`} />
 
         {/* Seção Sobre */}
         <section id="sobre" className="space-y-6">
@@ -40,11 +40,18 @@ export const App: React.FC = () => {
               Full-Stack na prática, um projeto de cada vez.
             </p>
             <p>
-              Hoje desenvolvo, ao lado do Kennedy Motta, a{" "}
-              <strong>Adapty</strong> — uma plataforma de treinos com montador
-              automático, otimização inteligente e segurança de verdade por
-              trás. Estou pronto para levar essa energia a um time como
-              desenvolvedor Full-Stack.
+              Meu projeto mais completo até agora é um{" "}
+              <strong>gerenciador de projetos no estilo Kanban</strong>, com
+              front-end em Angular e API em Node.js com PostgreSQL. Nele
+              pratiquei o que um sistema real precisa: login seguro,
+              permissões por papel, convites para a equipe, notificações e
+              testes automatizados no front e na API.
+            </p>
+            <p>
+              Gosto de entender como as coisas funcionam de ponta a ponta, da
+              tela ao banco de dados. Busco um estágio ou vaga júnior em que
+              eu possa aprender com um time e contribuir de verdade no dia a
+              dia.
             </p>
           </div>
         </section>

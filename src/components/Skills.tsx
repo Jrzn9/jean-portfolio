@@ -11,7 +11,7 @@ const skillGroups: SkillGroup[] = [
   {
     icon: <Code2 className="w-5 h-5 text-purple-600 dark:text-purple-400" />,
     title: "Front-End",
-    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Tailwind CSS", "Vite"]
+    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Angular", "Tailwind CSS", "Vite"]
   },
   {
     icon: <Server className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
@@ -31,7 +31,7 @@ const skillGroups: SkillGroup[] = [
   {
     icon: <Wrench className="w-5 h-5 text-slate-700 dark:text-slate-300" />,
     title: "Ferramentas",
-    skills: ["Git", "GitHub", "Pytest", "Jest"]
+    skills: ["Git", "GitHub", "Pytest", "Jest", "Vitest"]
   },
   {
     icon: <Lightbulb className="w-5 h-5 text-amber-600 dark:text-amber-400" />,

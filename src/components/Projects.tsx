@@ -1,31 +1,34 @@
 import React from 'react';
-import { Github, FolderGit2 } from 'lucide-react';
+import { Github, FolderGit2, ExternalLink } from 'lucide-react';
+
+interface RepoLink {
+  label: string;
+  url: string;
+}
 
 interface Project {
   title: string;
   description: string;
   tags: string[];
-  githubUrl?: string;
+  repos: RepoLink[];
+  liveUrl?: string;
 }
 
 const projects: Project[] = [
   {
+    title: "Gerenciador de Projetos — Kanban Full-Stack",
+    description: "Aplicação completa para gerenciar projetos em equipe. Quadro Kanban com arrastar e soltar (atualização otimista), busca, filtros e atalhos de teclado, convites com aceite por e-mail ou link seguro, equipe com cargos, notificações, comentários e histórico das tarefas. Front-end em Angular 22 (Signals, Angular CDK) e API em Node.js com Express, Prisma e PostgreSQL, com 147 testes automatizados.",
+    tags: ["Angular", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT"],
+    repos: [
+      { label: "Front-end", url: "https://github.com/Jrzn9/gerenciador-projetos-web" },
+      { label: "API", url: "https://github.com/Jrzn9/gerenciador-projetos-api" }
+    ]
+  },
+  {
     title: "Portfólio Pessoal",
     description: "Desenvolvido do zero, com interface moderna e totalmente responsiva para múltiplos dispositivos. Estruturado com componentização reutilizável, aplicando boas práticas de desenvolvimento Front-End.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    githubUrl: "https://github.com/Jrzn9/jean-portfolio"
-  },
-  {
-    title: "Adapty — API de Treinos",
-    description: "API completa por trás do app Adapty, desenvolvida em dupla com Kennedy Motta. Monta, analisa e otimiza fichas de treino automaticamente a partir de objetivo, nível e mais de 20 particularidades de saúde, com histórico, estatísticas, sobrecarga progressiva, recursos sociais em tempo real e segurança de ponta a ponta (JWT, bcrypt, auditoria de ações administrativas).",
-    tags: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "WebSocket", "JWT"],
-    githubUrl: "https://github.com/Jrzn9/fichas-de-treino"
-  },
-  {
-    title: "Gerenciador de Projetos — API REST",
-    description: "API no estilo de um quadro Kanban para gerenciar projetos e tarefas em equipe. Controle de permissões por papel (dono e membro), tarefas com status e responsável, validação de dados em todas as rotas e testes automatizados cobrindo os principais fluxos.",
-    tags: ["Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Zod"],
-    githubUrl: "https://github.com/Jrzn9/gerenciador-projetos-api"
+    repos: [{ label: "Repositório", url: "https://github.com/Jrzn9/jean-portfolio" }]
   }
 ];
 
@@ -37,7 +40,7 @@ export const Projects: React.FC = () => {
         <p className="text-slate-600 dark:text-slate-400 mt-2">Projetos pessoais desenvolvidos para colocar em prática o que venho estudando.</p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {projects.map((proj, idx) => (
           <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:shadow-md dark:hover:border-purple-500/50 transition-shadow">
             <div className="space-y-4">
@@ -58,9 +61,14 @@ export const Projects: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-4 pt-2 border-t border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400">
-                {proj.githubUrl && (
-                  <a href={proj.githubUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-medium hover:text-purple-600 dark:hover:text-purple-400">
-                    <Github className="w-4 h-4" /> Repositório
+                {proj.repos.map((repo) => (
+                  <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-medium hover:text-purple-600 dark:hover:text-purple-400">
+                    <Github className="w-4 h-4" /> {repo.label}
+                  </a>
+                ))}
+                {proj.liveUrl && (
+                  <a href={proj.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-xs font-medium hover:text-purple-600 dark:hover:text-purple-400">
+                    <ExternalLink className="w-4 h-4" /> Ver online
                   </a>
                 )}
               </div>

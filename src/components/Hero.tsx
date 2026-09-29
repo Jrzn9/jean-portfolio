@@ -5,7 +5,7 @@ interface HeroProps {
   avatarUrl?: string;
 }
 
-export const Hero: React.FC<HeroProps> = ({ avatarUrl = "/avatar.jpg" }) => {
+export const Hero: React.FC<HeroProps> = ({ avatarUrl = `${import.meta.env.BASE_URL}avatar.jpg` }) => {
   return (
     <section className="grid md:grid-cols-12 gap-12 items-center pt-8">
       <div className="md:col-span-7 space-y-6">
@@ -98,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ avatarUrl = "/avatar.jpg" }) => {
               <p className="text-xs text-slate-500 dark:text-slate-400">Full-Stack Developer</p>
             </div>
             <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-              React • Python • TS
+              React • Node.js • TS
             </span>
           </div>
         </div>

@@ -26,9 +26,10 @@ export const Hero: React.FC<HeroProps> = ({ avatarUrl = `${import.meta.env.BASE_
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-          Estudante de Ciência da Computação (4º semestre), esforçado e
-          responsável, em busca de uma oportunidade na área de Desenvolvimento
-          Web ou Software Full-Stack.
+          Estudante de Ciência da Computação (4º semestre) que cria aplicações
+          web completas com Angular, React e Node.js, da interface à API e ao
+          banco de dados. Em busca de estágio ou vaga júnior como
+          desenvolvedor Full-Stack.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 pt-2">

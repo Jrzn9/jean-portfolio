@@ -14,6 +14,11 @@
   <a href="https://jrzn9.github.io/jean-portfolio/"><strong>Acesse o site: jrzn9.github.io/jean-portfolio</strong></a>
 </p>
 
+<p align="center">
+  <img src="docs/prints/portfolio-claro.jpg" alt="Página inicial do portfólio no tema claro" width="49%">
+  <img src="docs/prints/portfolio-escuro.jpg" alt="Página inicial do portfólio no tema escuro" width="49%">
+</p>
+
 ---
 
 ## Sobre o Projeto
